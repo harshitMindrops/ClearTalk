@@ -6,7 +6,7 @@ class SignalingService {
   // ── Change to your server IP/URL ─────────────
   // Emulator ke liye: http://10.0.2.2:3002
   // Physical device ke liye: http://<PC-LAN-IP>:3002
-  static const String _serverUrl = 'http://192.168.1.50:3002';
+  static const String _serverUrl = 'https://cleartalk-production.up.railway.app';
 
   // Nullable — connect() ke baad hi initialize hota hai
   io.Socket? _socket;

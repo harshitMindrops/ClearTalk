@@ -5,8 +5,7 @@ class AuthApi {
   // Physical device testing: backend should be reachable on your LAN.
   // Example: http://192.168.1.50:3002
   // Physical device test ke liye: apni PC ki LAN IP use karo
-  static const String baseUrl = 'http://192.168.1.50:3002';
-
+  static const String baseUrl = 'https://cleartalk-production.up.railway.app';
 
   static Future<Map<String, dynamic>> login({
     required String email,
@@ -17,10 +16,7 @@ class AuthApi {
     final res = await http.post(
       uri,
       headers: const {"Content-Type": "application/json"},
-      body: jsonEncode({
-        'email': email,
-        'password': password,
-      }),
+      body: jsonEncode({'email': email, 'password': password}),
     );
 
     final data = _decode(res);
@@ -42,11 +38,7 @@ class AuthApi {
     final res = await http.post(
       uri,
       headers: const {"Content-Type": "application/json"},
-      body: jsonEncode({
-        'name': name,
-        'email': email,
-        'password': password,
-      }),
+      body: jsonEncode({'name': name, 'email': email, 'password': password}),
     );
 
     final data = _decode(res);
@@ -68,4 +60,3 @@ class AuthApi {
     }
   }
 }
-
