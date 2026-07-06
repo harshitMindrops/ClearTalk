@@ -1,0 +1,13 @@
+# Secrets and local config
+server/.env
+server/ATLAS_CONNECTION_STRING.txt
+
+# Node
+server/node_modules/
+
+# Flutter/Dart
+clear_talk/.dart_tool/
+clear_talk/.flutter-plugins
+clear_talk/.flutter-plugins-dependencies
+clear_talk/.packages
+clear_talk/build/
